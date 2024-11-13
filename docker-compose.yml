@@ -4,3 +4,9 @@ services:
     ports:
       - "80:80"
       - "443:443"
+  apache2:
+    image: php:7.4-apache
+    volumes:
+      - ./apache2/php.ini:/usr/local/etc/php/php.ini
+      - ./apache2/index.php:/var/www/html/index.php
+      - ./apache2/php-info.conf:/etc/apache2/sites-available/php-info.conf
