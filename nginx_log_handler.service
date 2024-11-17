@@ -1,0 +1,12 @@
+[Unit]
+Description=NGINX Log Handler Service
+After=network.target
+
+[Service]
+ExecStart=/var/www/script.sh
+Restart=always
+User=your_user
+Group=your_group
+
+[Install]
+WantedBy=multi-user.target
